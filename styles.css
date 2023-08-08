@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#svg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    height: 300px;
+    width: 100%;
+}
+
+#svg-area {
+    height: 300px;
+    width: 300px;
+    border: 10px solid rgb(48, 46, 46);
+    border-radius: 50px;
+    background-color: black;
+}
+
+.wave {
+    stroke: black;
+    stroke-width: 3;
+    fill: rgb(12, 11, 11);
+    /* opacity: .5; */
+}
+
+.star {
+    stroke: white;
+    stroke-width: 2;
+    fill: #ffffff;
+}
+
+#rocket-body {
+    stroke: black;
+    stroke-width: 2;
+    fill: red;
+}
+
+.fin  {
+    stroke: black;
+    stroke-width: 2;
+    fill: gray;
+}
+
+#mars {
+    stroke: rgb(228, 116, 11);
+    stroke-width: 5;
+    fill: rgb(187, 79, 7);
+}
+
+#earth {
+    stroke: rgb(22, 1, 80);
+    stroke-width: 5;
+    fill: rgb(82, 61, 3);
+    
+}
+
+#moon {
+    stroke: darkgray;
+    stroke-width: 3;
+    fill: gray;
+    animation-name: spin;
+    animation-duration: 8s;
+    animation-iteration-count: infinite; 
+}
+
+/*rotate moon around earth animation*/
+@keyframes spin {
+        from { 
+            transform: rotate(0deg); 
+        } to { 
+            transform: rotate(360deg); 
+        }
+    
+}
+
+/*launch rocket animation*/
+.animate {
+    transform: translate(0,-300px);
+    transition-timing-function: ease-in;
+    transition: 3s;
+    transition-delay: .5s;
+}
+
+#button-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.launch-button {
+    height: 40px;
+    width: 75px;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: purple;
+    color: white;
+}
+
+.launch-button:hover {
+    transform: scale(1.2);
+    background-color: lime;
+    color: black;
+    cursor: pointer;
+}
